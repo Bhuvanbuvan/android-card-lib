@@ -1,0 +1,7 @@
+jdk:
+  - openjdk17
+before_install:
+  - ./scripts/prepareJitpackEnvironment.sh
+install:
+  - FILE="-Dfile=android-card-lib-release.aar"
+  - mvn install:install-file $FILE -DgroupId=com.github.Bhuvanbuvan -DartifactId=android-card-lib -Dversion=1.1 -Dpackaging=aar -DgeneratePom=true
